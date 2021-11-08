@@ -1,14 +1,19 @@
 UML Document:
 Located under uml folder
 
-The contract address:0xE8d965Fa632d4687131C213E3E159fD8431e6E39
+Test contract:
+
+Run truffle test to verify all functions work properly.
+
+transaction hash: 0xb760ef2996a1d2680445ddc7bd33c289f3afbca7c5e14d7db2d39f61df029263
+
+Contract address:0xE8d965Fa632d4687131C213E3E159fD8431e6E39
 
 If libraries were used, include why these libraries were adopted.
+
   Solidity: 0.8.1     -- Used as the contract compiler
   truffle-hdwallet-provider: 1.0.17   -- Use it to sign transactions
 
-If IPFS is used, include how IPFS is used in this project.
-IPFS was not used
 
 Node version number: v14.15.4
 Truffle version number: v5.4.15 (core: 5.4.15)
@@ -16,7 +21,7 @@ web3 version number: v1.5.3
 
 
 
-Replacing 'SupplyChain'
+
 -----------------------
 
 > Network name:    'rinkeby'
