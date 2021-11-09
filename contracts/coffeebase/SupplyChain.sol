@@ -379,7 +379,7 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
   uint    productID,
   string  memory productNotes,
   uint    productPrice,
-  uint    itemState,
+  string memory  itemState,
   address distributorID,
   address retailerID,
   address consumerID
@@ -391,7 +391,32 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
     productID = items[_upc].productID;
     productNotes = items[_upc].productNotes;
     productPrice = items[_upc].productPrice;
-    itemState = uint256(items[_upc].itemState);
+
+    uint itemState_num = uint256(items[_upc].itemState);
+    if (itemState_num == 0) {
+      itemState = "Harvested";
+    }
+    else if (itemState_num == 1) {
+      itemState = "Processed";
+    }
+    else if (itemState_num == 2) {
+      itemState = "Packed";
+    }
+    else if (itemState_num == 3) {
+      itemState = "ForSale";
+    }
+    else if (itemState_num == 4) {
+      itemState = "Sold";
+    }
+    else if (itemState_num == 5) {
+      itemState = "Shipped";
+    }
+    else if (itemState_num == 6) {
+      itemState = "Received";
+    }
+    else {
+      itemState = "Purchased";
+    }
     distributorID = items[_upc].distributorID;
     retailerID = items[_upc].retailerID;
     consumerID = items[_upc].consumerID;
